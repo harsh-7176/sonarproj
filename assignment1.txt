@@ -1,0 +1,118 @@
+Q1. convert a list of string and characters to a list of characters.
+-->
+--> l=['harsh','string']
+    list(''.join(l))                    //1st method
+['h', 'a', 'r', 's', 'h', 's', 't', 'r', 'i', 'n', 'g']
+ 
+--> [c for s in l for x in s]     //2nd method list comprehension
+
+--> a=['harsh','mehta']
+ x=[]
+ for s in a:
+  x.extend(s)
+
+hm> x
+['h', 'a', 'r', 's', 'h', 'm', 'e', 'h', 't', 'a']
+
+-->x[]
+for s in l:
+  for c in s:
+    x.append(c);
+
+
+Q2. convert a list of characters to a string.
+--> ''.join(a) //1st method
+
+-->s=''                 //2nd method
+   for c in l
+    s=s+c
+
+Q3. convert a string to a list of characters.
+--> list(a)
+
+-->[c for c in s]
+-->x=[]
+   for c in s:
+    x.append(c)
+
+Q4.Convert a String so that it holds only distinct Characters.
+-->''.join(set(a))
+
+-->d=''
+   for c in s:
+    if c not in d:d=d+c
+
+
+Q5. Count the No. of Vowels in the String.
+-->len([ c for c in s if c in 'aeiou'])
+
+-->n=0
+   for c in s:
+    if c in 'aeiou' : n+=1
+
+-->len(list(filter(lambda c: c in 'aeiou',s)))
+-->len([c for c in s if c in 'aeiou'])
+
+
+Q6.Count the No. of Words in the string
+hm> a="it is what it is"
+hm> len(a.split())
+5
+hm>
+
+Q7.Count the No. of Words in the String
+hm> a="it is what it  is"
+hm> len(a.split())
+5
+hm>
+
+Q8.Convert a String to a square matrix grid of characters.
+hm> n=math.ceil(len(a)**.5)
+hm> for i in range(n):
+-->  print(a[i*n:(i+1)*n].ljust(n,'*'))
+-->
+ver
+oni
+ca*
+hm>	
+
+hm> n=math.ceil(len(a)**.5)
+hm> for i in range(n):
+-->  print(a[i*n:(i+1)*n])
+-->
+ver
+oni
+ca
+
+-->print('\n'.join(a[i*n:(i+1)*n].ljust(n,'*') for i in range(n)))
+
+Q9.Code to print common characters of two strings in sorted order.
+hm> s=set('harsh')
+hm> n=set('hameh')
+hm> sorted(s.intersection(n))
+['a', 'h']
+hm> ''.join(sorted(s.intersection(n)))
+'ah'
+
+
+hm>''.join(sorted(set(X)&set(Y)))
+
+''.join(sorted(filter(lambda c:c in y,set(x))))
+
+hm>s=''
+ for c in set(x):
+  if c in y:s=s+c
+
+sorted(s)
+
+hm>''join.([c for c in set(x) if x in y])
+
+Q10.Code to reverse the string
+
+1.---a[::-1]
+2.---''.join(reversed(s))
+
+Q11.Code to extract n bits from the number.
+hm> bin(x)[2:][-n:]
+'101'
+

@@ -1,0 +1,34 @@
+
+                                                    p y t h o n   @   m e h t a ' s
+
+                                                       v e r s i o n   -   3 . 9
+
+
+hm> l=['A','List','o','f
+  File "<stdin>", line 1
+    l=['A','List','o','f
+                        ^
+SyntaxError: EOL while scanning string literal
+hm> l=['A','List','o','f','chars','&','s','tring','s']
+hm> list(''.join(l))
+['A', 'L', 'i', 's', 't', 'o', 'f', 'c', 'h', 'a', 'r', 's', '&', 's', 't', 'r', 'i', 'n', 'g', 's']
+hm> x=[]
+hm> for s in l:
+-->  x.extend(s)
+-->
+hm> x
+['A', 'L', 'i', 's', 't', 'o', 'f', 'c', 'h', 'a', 'r', 's', '&', 's', 't', 'r', 'i', 'n', 'g', 's']
+hm> for s in l:
+-->  for c in s:
+-->   x.append(c)
+-->
+hm> x
+['A', 'L', 'i', 's', 't', 'o', 'f', 'c', 'h', 'a', 'r', 's', '&', 's', 't', 'r', 'i', 'n', 'g', 's', 'A', 'L', 'i', 's', 't', 'o', 'f', 'c', 'h', 'a', 'r', 's', '&', 's', 't', 'r', 'i', 'n', 'g', 's']
+hm> x=[]
+hm> for s in l:
+-->  for c in s:
+-->   x.append(c)
+-->
+hm> x
+['A', 'L', 'i', 's', 't', 'o', 'f', 'c', 'h', 'a', 'r', 's', '&', 's', 't', 'r', 'i', 'n', 'g', 's']
+hm>
